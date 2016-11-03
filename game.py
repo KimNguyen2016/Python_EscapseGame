@@ -19,7 +19,7 @@ block_color = (91,192,222)
 intro_color = (255,204,92)
 # --------------------------------------------- #
 
-car_width = 85
+rabit_width = 85
 pause = False
 
 gameDisplay = pygame.display.set_mode((display_width, display_height))
@@ -188,7 +188,7 @@ def game_loop():
     car(x,y)
     things_dodged(dodged)
     
-    if  x > display_width - car_width or x < 0:      
+    if  x > display_width - rabit_width or x < 0:      
       crash()
       
     if thing_starty > display_height:
@@ -202,7 +202,7 @@ def game_loop():
       
     if y < thing_starty + thing_height:
       #crash()    
-      if x > thing_startx and x < thing_startx + thing_width or x + car_width > thing_startx and x + car_width < thing_startx + thing_width:                
+      if x > thing_startx and x < thing_startx + thing_width or x + rabit_width > thing_startx and x + rabit_width < thing_startx + thing_width:                
         crash()           
     pygame.display.update()
     clock.tick(60)
